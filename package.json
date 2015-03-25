@@ -1,0 +1,29 @@
+{
+  "name": "mandarin",
+  "version": "1.0.0",
+  "description": "mandarin vocabulary learning tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staff0rd/mandarin"
+  },
+  "keywords": [
+    "mandarin",
+    "flashcards",
+    "learning",
+    "vocabulary",
+    "chinese"
+  ],
+  "author": "Stafford Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staff0rd/mandarin/issues"
+  },
+  "homepage": "https://github.com/staff0rd/mandarin",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
