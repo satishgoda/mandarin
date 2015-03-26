@@ -1,0 +1,7 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE word (id INTEGER PRIMARY KEY, english VARCHAR, pinyin VARCHAR);
+INSERT INTO "word" VALUES(1,'yī','one');
+INSERT INTO "word" VALUES(2,'èr','two');
+INSERT INTO "word" VALUES(3,'sān','three');
+COMMIT;
