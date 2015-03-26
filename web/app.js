@@ -1,4 +1,5 @@
 var express = require('express');
+var orm = require('orm');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -22,6 +23,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(orm.express("sqlite://" + path.join(__dirname, "../database/database.db3"), {
+    define: function (db, models, next) {
+        models.word = db.define("word", {
+        	id: {type: 'serial', key: true},
+        	english: String,
+        	pinyin: String
+        });
+        next();
+    }
+}));
 
 app.use('/', routes);
 app.use('/users', users);
